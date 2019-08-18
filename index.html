@@ -4,9 +4,85 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link ref="style.css" rel="stylesheet" type="text/css" />
     <title>Document</title>
   </head>
   <body>
-    Hi
+    <section class="loading">
+      For new sidebar colors, click your workspace name, then Preferences >
+      Sidebar > Theme
+      <span class="loading__author"> - Your friends at Slack</span>
+      <span class="loading__anim"></span>
+      <span class="loading__anim-2"></span>
+    </section>
   </body>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .loading {
+      max-width: 50%;
+      line-height: 1.4;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: center;
+    }
+    .loading__author {
+      font-weight: normal;
+      font-size: 0.9rem;
+      color: rgba(189, 189, 189, 1);
+      margin: 0.6rem 0 2rem 0;
+      display: block;
+    }
+    .loading__anim {
+      width: 35px;
+      height: 35px;
+      transform: rotate(90deg);
+      display: inline-block;
+      border: 5px solid rgba(242, 241, 241, 0.879);
+      border-left-color: rgb(215, 47, 72);
+      border-top-color: rgb(215, 47, 72);
+      border-radius: 50%;
+      animation: rotate2 1000ms infinite cubic-bezier(0.1, 0.7, 1, 0.1);
+    }
+    .loading__anim-2 {
+      position: relative;
+      transform: rotate(-120deg);
+      z-index: 3;
+      left: -9px;
+      width: 35px;
+      height: 35px;
+      display: inline-block;
+      border: 5px solid rgba(242, 241, 241, 0.879);
+      border-left-color: rgb(215, 47, 72);
+      border-top-color: rgb(215, 47, 72);
+      border-radius: 50%;
+      animation: rotate1 1000ms infinite cubic-bezier(0.1, 0.7, 1, 0.1);
+    }
+    @keyframes rotate1 {
+      from {
+        border-left-color: rgb(215, 47, 72);
+        border-top-color: rgb(215, 47, 72);
+      }
+      to {
+        transform: rotate(-1turn);
+        border-left-color: rgba(242, 241, 241, 0.879);
+        border-top-color: rgba(242, 241, 241, 0.879);
+      }
+    }
+    @keyframes rotate2 {
+      from {
+        border-left-color: rgb(215, 47, 72);
+        border-top-color: rgb(215, 47, 72);
+      }
+      to {
+        border-left-color: rgba(242, 241, 241, 0.879);
+        border-top-color: rgba(242, 241, 241, 0.879);
+        transform: rotate(2turn);
+      }
+    }
+  </style>
 </html>
